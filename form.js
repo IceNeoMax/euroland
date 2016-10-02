@@ -1,10 +1,11 @@
     function validateFormOnSubmit(contact) {
     reason = "";
     reason += validateName(contact.name);
-    //reason += validatePass(contact.pass);
+    reason += validatePass(contact.pass);
+        reason += validateRepass(contact.pass,contact.repass);
     reason += validateEmail(contact.email);
 
-    console.log(contact);
+    console.log(contact.name);
     if (reason.length > 0) {
 
         return false;
@@ -18,7 +19,7 @@ function validateName(name) {
 
     if (name.value.length < 6) {
         name.style.background = 'Red';
-        document.getElementById('name-error').innerHTML = "Ít nhất phải 6 kí tự nha";
+        document.getElementById('name-error').innerHTML = "Ít nhất phải 6 kí tự mới được cơ";
         var error = "1";
     } else {
         name.style.background = 'White';
@@ -29,25 +30,36 @@ function validateName(name) {
 
 function validatePass(pass) {
     var error = "";
-
-    if (name.value.length < 6) {
-        name.style.background = 'Red';
-        document.getElementById('name-error').innerHTML = "Ít nhất 6 kí tự cơ mà";
-        var error = "1";
-    } else {
-        name.style.background = 'White';
-        document.getElementById('name-error').innerHTML = '';
+    var passfilter = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,})/;
+    if (!passfilter.test(pass.value)) {
+        pass.style.background = 'Red';
+        document.getElementById('pass-error').innerHTML = "Pass ít nhất phải có 8 kí tự, chữ cái hoa, chữ cái thường, kí tự đặc biệt và số mới được cơ.";
+        var error = "5";
+    }else {
+        pass.style.background = 'White';
+        document.getElementById('pass-error').innerHTML = '';
     }
+    
     return error;
 }
 
-function trim(s) {
-    return s.replace(/^\s+|\s+$/, '');
+function validateRepass(pass,repass) {
+    var error = "";
+    
+    if (pass.value!=repass.value) {
+        repass.style.background = 'Red';
+        document.getElementById('repass-error').innerHTML = "Pass và Repass phải giống nhau mới được cơ.";
+        var error = "6";
+    }else {
+        repass.style.background = 'White';
+        document.getElementById('repass-error').innerHTML = '';
+    }
+    
+    return error;
 }
 
 function validateEmail(email) {
     var error = "";
-    var temail = trim(email.value); 
     var emailFilter = /^[^@]+@[^@.]+\.[^@]*\w\w$/;
     var illegalChars = /[\(\)\<\>\,\;\:\\\"\[\]]/;
 
