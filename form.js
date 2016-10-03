@@ -1,8 +1,8 @@
-    function validateFormOnSubmit(contact) {
+function validateFormOnSubmit(contact) {
     reason = "";
     reason += validateName(contact.name);
     reason += validatePass(contact.pass);
-        reason += validateRepass(contact.pass,contact.repass);
+    reason += validateRepass(contact.pass,contact.repass);
     reason += validateEmail(contact.email);
 
     console.log(contact.name);
@@ -41,7 +41,7 @@ function validatePass(pass) {
         document.getElementById('pass-error').style.color = 'Red';
         document.getElementById('pass-error').classList.add("animated","flash");
         document.getElementById('pass-error').innerHTML = "Pass ít nhất phải có 8 kí tự, chữ cái hoa, chữ cái thường, kí tự đặc biệt và số mới được cơ.";
-        var error = "5";
+        var error = "2";
     }
     else {
         pass.style.background = 'White';
@@ -60,7 +60,7 @@ function validateRepass(pass,repass) {
         document.getElementById('repass-error').style.color = 'Red';
         document.getElementById('repass-error').classList.add("animated","pulse");
         document.getElementById('repass-error').innerHTML = "Pass và Repass phải giống nhau mới được cơ.";
-        var error = "6";
+        var error = "3";
     }
     else {
         repass.style.background = 'White';
@@ -73,25 +73,16 @@ function validateRepass(pass,repass) {
 
 function validateEmail(email) {
     var error = "";
-    var emailFilter = /^[^@]+@[^@.]+\.[^@]*\w\w$/;
-    var illegalChars = /[\(\)\<\>\,\;\:\\\"\[\]]/;
+    var emailFilter = /(\w+)\@(\w+)\.[a-zA-Z]/;
 
-    if (email.value == "") {
+    if (!emailFilter.test(email.value)) {
         email.style.background = 'Red';
-        document.getElementById('email-error').innerHTML = "Điền Email vào nha.";
+        document.getElementById('email-error').style.color = 'Red';
+        document.getElementById('email-error').innerHTML = "Email phải có dạng xxxx@yyyy.com mới được cơ.";
         document.getElementById('email-error').classList.add("animated","shake");
-        var error = "2";
-    } else if (!emailFilter.test(temail)) {
-        email.style.background = 'Red';
-        document.getElementById('email-error').classList.add("animated","shake");
-        document.getElementById('email-error').innerHTML = "Điền email sai rồi nha.";
-        var error = "3";
-    } else if (email.value.match(illegalChars)) {
-        email.style.background = 'Red';
         var error = "4";
-        document.getElementById('email-error').classList.add("animated","shake");
-        document.getElementById('email-error').innerHTML = "Email không được chứa các kí tự đặc biệt nha.";
-    } else {
+    }
+    else {
         email.style.background = 'White';
         document.getElementById('email-error').style.color = 'Green';
         document.getElementById('email-error').innerHTML = 'được rồi nha :*';
