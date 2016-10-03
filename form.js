@@ -20,7 +20,7 @@ function validateName(name) {
     if (name.value.length < 6) {
         name.style.background = 'Red';
         document.getElementById('name-error').style.color = 'Red';
-        document.getElementById('name-error').classList.add("animated","bounce");
+        document.getElementById('name-error').classList.add("more3sec","bounce");
         document.getElementById('name-error').innerHTML = "Ít nhất phải 6 kí tự mới được cơ";
         var error = "1";
     }
@@ -78,7 +78,7 @@ function validateEmail(email) {
     if (!emailFilter.test(email.value)) {
         email.style.background = 'Red';
         document.getElementById('email-error').style.color = 'Red';
-        document.getElementById('email-error').innerHTML = "Email phải có dạng xxxx@yyyy.com mới được cơ.";
+        document.getElementById('email-error').innerHTML = "Email phải có dạng xxxx@yyyy.zzz mới được cơ.";
         document.getElementById('email-error').classList.add("animated","shake");
         var error = "4";
     }
