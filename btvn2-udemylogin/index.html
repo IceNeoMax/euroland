@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="487034388139-66cilos2glnp1kn52iagjjuf897h97vk.apps.googleusercontent.com">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -10,9 +11,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="setup-login.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1214826988569474";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <div class="green-cross"></div>
     
     <div id="myModal" class="modal fade" role="dialog">
@@ -28,12 +37,15 @@
                  <div class="row">
                      <div class="col-md-5">
                       <div class="loginfb">
-                          <i class="face-icon fa fa-facebook"></i>
-                          <span class="face-text">Continue With Facebook</span>
+                          <!-- <i class="face-icon fa fa-facebook"></i>
+                          <span class="face-text">Continue With Facebook</span> -->
+                          <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true">Continue With Facebook</div>
                       </div>
                       <div class="logingg">
-                          <i class="gg-icon fa fa-google-plus"></i>
-                          <span class="gg-text">Continue With Google</span>
+                          <!-- <i class="gg-icon fa fa-google-plus"></i>
+                          <span class="gg-text">Continue With Google</span> -->
+                          <div class="g-signin2" data-onsuccess="onSignIn">Continue With Google</div>
+                          <a href="#" onclick="signOut();">Sign out</a>
                       </div>
                       </div>
                   
@@ -56,10 +68,10 @@
                                    <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-lock"></span> 
                                    </div>
-                                   <input class="form-control" id="email" name="email" type="text" placeholder="Password"/>
+                                   <input class="form-control" id="pass" name="pass" type="text" placeholder="Password"/>
                                 </div>
                               </div>
-                              <button type="submit" class="btn btn-success">Login</button>
+                              <button type="submit" class="btn btn-success" onclick="logindf(document.getElementById('email').value,document.getElementById('pass').value)">Login</button>
                               or <span style="color:blue; cursor:pointer;"> Forgot your password. </span>
                         </form>
                       </div>
@@ -117,6 +129,7 @@
          
     </section>
     
-    
+<script src="check-login.js"></script>
+
 </body>
 </html>
