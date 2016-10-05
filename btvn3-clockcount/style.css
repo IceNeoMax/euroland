@@ -1,0 +1,26 @@
+*{
+    font-family: 'Roboto', sans-serif;
+
+}
+h1{
+float: left;
+  font-size: 40px;
+  margin: 30px;
+    color: white;
+}
+
+#wrapper{
+    background-color: orangered;
+	font-weight: 100;
+	font-size: 30px;
+}
+
+#wrapper > div{
+
+    background-color: white;
+	padding: 10px;
+	display: inline-block;
+    border-right: 1px solid grey;
+}
+
+
