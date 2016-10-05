@@ -11,17 +11,45 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://apis.google.com/js/api:client.js" async defer></script>
 </head>
 <body>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>
+(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1214826988569474";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+
+var googleUser = {};
+  var startApp = function() {
+    gapi.load('auth2', function(){
+      // Retrieve the singleton for the GoogleAuth library and set up the client.
+      auth2 = gapi.auth2.init({
+        client_id: '487034388139-66cilos2glnp1kn52iagjjuf897h97vk.apps.googleusercontent.com',
+        cookiepolicy: 'single_host_origin',
+        // Request scopes in addition to 'profile' and 'email'
+        //scope: 'additional_scope'
+      });
+      attachSignin(document.getElementById('customgg-button'));
+    });
+  };
+
+  function attachSignin(element) {
+    console.log(element.id);
+    auth2.attachClickHandler(element, {},
+        function(googleUser) {
+          document.getElementById('name').innerText = "Signed in: " +
+              googleUser.getBasicProfile().getName();
+        }, function(error) {
+          alert(JSON.stringify(error, undefined, 2));
+        });
+  }
+
+</script>
     <div class="green-cross"></div>
     
     <div id="myModal" class="modal fade" role="dialog">
@@ -36,16 +64,17 @@
               <div class="box-warper">
                  <div class="row">
                      <div class="col-md-5">
-                      <div class="loginfb">
-                          <!-- <i class="face-icon fa fa-facebook"></i>
-                          <span class="face-text">Continue With Facebook</span> -->
-                          <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true">Continue With Facebook</div>
+                      <div class="loginfb" onclick="loginfb()">
+                          <i class="face-icon fa fa-facebook"></i>
+                          <span class="face-text">Continue With Facebook</span>
+                          <!-- <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true">Continue With Facebook</div> -->
                       </div>
-                      <div class="logingg">
-                          <!-- <i class="gg-icon fa fa-google-plus"></i>
-                          <span class="gg-text">Continue With Google</span> -->
-                          <div class="g-signin2" data-onsuccess="onSignIn">Continue With Google</div>
-                          <a href="#" onclick="signOut();">Sign out</a>
+                      <div id="customgg-button" class="logingg">
+                          <i class="gg-icon fa fa-google-plus"></i>
+                          <span class="gg-text">Continue With Google</span>
+                          <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+                          <a href="#" onclick="signOut();"></a>
+                           <div id="name"></div>
                       </div>
                       </div>
                   
@@ -128,7 +157,8 @@
         </div>
          
     </section>
-    
+   
+  <script>startApp();</script>
 <script src="check-login.js"></script>
 
 </body>

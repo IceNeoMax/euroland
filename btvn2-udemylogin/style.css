@@ -124,15 +124,16 @@ ul{
 }
 
 .loginfb{
-    /*background-color: #2b85c3;
+    background-color: #2b85c3;
     cursor: pointer;
     display: inline-block;
     width: 270px;
-    height: 50px;*/
+    height: 50px;
     text-align: center;
     border-radius: 5px;
     margin-left: 20px;
-    padding: 30px;
+    margin-top: 30px;
+    /*padding: 30px;*/
 }
 
 .loginfb i{
@@ -152,20 +153,19 @@ ul{
     font-weight: 700;
 }
 
-.loginfb span:after{
-    content: "Continue With Google"!important;
-}
+
 
 .logingg{
-   /* background-color: #d03a3c;
+    background-color: #d03a3c;
     cursor: pointer;
     display: inline-block;
     width: 270px;
     height: 50px;
-    border-radius: 5px;*/
-    margin-left: 46px;
-    margin-bottom: 40px;
-    padding: 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /*padding: 20px;*/
 }
 .abcRioButtonLightBlue{
     background-color: #d03a3c!important;
