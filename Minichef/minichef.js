@@ -77,3 +77,4 @@ console.log(maxOfThree("a",4,99));
 console.log(maxArray([1,2,4,500,89]));
 console.log(maxArray([1,2,4,"asd",8]));
 console.log(sumArray([1,2,4,500,89]));
+console.log(sumArray(["asdasd",2,4,500,89]));
