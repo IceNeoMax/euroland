@@ -70,6 +70,15 @@ var sumArray = function(arr){
     }
     return sum;
 }
+
+var checkChar = function(char){
+    if(char=="u"||char=="e"||char=="o"||char=="a"||char=="i")
+        return true;
+    return false;
+}
+
+
+
 console.log(maxOfTwo(2,4));
 console.log(maxOfTwo("a",4));
 console.log(maxOfThree(-10,4,999));
@@ -78,3 +87,6 @@ console.log(maxArray([1,2,4,500,89]));
 console.log(maxArray([1,2,4,"asd",8]));
 console.log(sumArray([1,2,4,500,89]));
 console.log(sumArray(["asdasd",2,4,500,89]));
+console.log(checkChar("a"));
+console.log(checkChar("h"));
+
