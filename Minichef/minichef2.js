@@ -1,4 +1,5 @@
 $(document).ready(function(){
 
-$("div h1").css('background-color','red');
+    $("div h1").css('background-color','red');
+    $( "#myselect option:selected" ).text();
 });
