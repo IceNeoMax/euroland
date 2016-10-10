@@ -77,7 +77,19 @@ var checkChar = function(char){
     return false;
 }
 
-
+var simpleEncrypt = function(string){
+    var temp='';
+    for(var i=0; i< string.length;i++){
+        if(string[i]!=" "){
+            if(!checkChar(string[i]) ){
+            temp= temp + string[i]+ 'o'+ string[i];
+        }
+        else temp += string[i];
+        }  
+        else temp += string[i];
+    }
+    return temp;
+}
 
 console.log(maxOfTwo(2,4));
 console.log(maxOfTwo("a",4));
@@ -89,4 +101,5 @@ console.log(sumArray([1,2,4,500,89]));
 console.log(sumArray(["asdasd",2,4,500,89]));
 console.log(checkChar("a"));
 console.log(checkChar("h"));
+console.log(simpleEncrypt("this is fun"));
 
