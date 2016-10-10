@@ -91,6 +91,15 @@ var simpleEncrypt = function(string){
     return temp;
 }
 
+var filterLongWords = function(arr,long){
+    var temp=[];
+    for(var i=0;i< arr.length;i++){
+        if(arr[i].length<long)
+            temp.push(arr[i]);
+    }
+    return temp;
+}
+
 console.log(maxOfTwo(2,4));
 console.log(maxOfTwo("a",4));
 console.log(maxOfThree(-10,4,999));
@@ -102,4 +111,5 @@ console.log(sumArray(["asdasd",2,4,500,89]));
 console.log(checkChar("a"));
 console.log(checkChar("h"));
 console.log(simpleEncrypt("this is fun"));
+console.log(filterLongWords(["1234","123","123456","12","123456789"],5));
 
