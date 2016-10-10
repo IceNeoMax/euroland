@@ -1,0 +1,67 @@
+body{
+    background: url('http://trunkweed.com/uploads/posts/images/794968-the-matrix-code-wallpaper.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.container{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    font-size: 3em;
+}
+.input{
+    color: black;
+}
+.out{
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top:10px;
+    color: black;
+}
+
+.pass{
+    width: 400px;
+    float: left;
+    font-size: 30px;
+    color: #fff;
+    margin-left: 0;
+    padding: 20px;
+    background-color: #f63;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

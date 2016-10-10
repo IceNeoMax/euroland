@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" 
+  rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+ <div class="select-theme">Select theme:
+    <select id="theme-select">
+      <option value="default">Default</option>
+      <option value="dark">Dark</option>
+      <option value="colorful">Colorful</option>
+    </select>
+ </div>
+  <div id="calculator">
+    <!-- the <p> inside the result div is optional (for css)-->
+    <div class="result"><p></p></div>
+    <div class="clear">C</div>
+ 
+    <span id="num7">7</span>
+    <span id="num8">8</span>
+    <span id="num9">9</span>
+    <span id="numplus">+</span>
+ 
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>-</span>
+ 
+    <span id="num1">1</span>
+    <span id="num2">2</span>
+    <span id="num3">3</span>
+    <span id="numdivide">÷</span>
+ 
+    <span>0</span>
+    <span>.</span>
+    <span>=</span>
+    <span>x</span>
+  </div>
+  <script src="cal.js"></script>
+</body>
+</html>
