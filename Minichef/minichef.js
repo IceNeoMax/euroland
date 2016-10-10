@@ -99,6 +99,21 @@ var filterLongWords = function(arr,long){
     }
     return temp;
 }
+var charFreg = function(para){
+    var keylist="abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*";
+    var temp=[];
+    for( var i=0; i<keylist.length;i++){
+        var count=0;
+            for(var j=0; j<para.length;j++){  
+                if(keylist[i]==para[j].toLowerCase())
+                    count++;
+            }
+        var temp2 = keylist[i];
+        temp.push({temp2,count});
+    }
+    return temp;
+    
+}
 
 console.log(maxOfTwo(2,4));
 console.log(maxOfTwo("a",4));
@@ -113,3 +128,4 @@ console.log(checkChar("h"));
 console.log(simpleEncrypt("this is fun"));
 console.log(filterLongWords(["1234","123","123456","12","123456789"],5));
 
+console.log(charFreg("Loremx10  asjldhas a7 6eaw785w9ayf7a-72567 -3 7%*&^)^)DSA*Dufashfksaj"))
