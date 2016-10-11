@@ -58,11 +58,14 @@ var random = function(){
 
 
     
-$('#submitBut').click(function(){
+$('#submitBut').click(function(event){
     $('#submitBut').attr('disabled', true);
         $('#submitBut').text("Saving...");
   setTimeout(function(){enableBtns()},1000);
-    setTimeout(function(){$('#submitBut').submit();},1300);
+    
+    setTimeout(function(){
+        event.preventDefault();
+        $('#submitBut').submit();},1300);
         
 });
 
