@@ -45,3 +45,4 @@ function enableBtns(){
 }
 
 $('p:last-child').addClass('w3r_font_color');
+$('p:nth-child(odd)').addClass('w3r_font_color w3r_background');
