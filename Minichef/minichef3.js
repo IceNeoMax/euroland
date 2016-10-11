@@ -1,3 +1,5 @@
+var textlength=$('#textarea').val().length;
+
 if ($('#back-to-top').length) {
     var scrollTrigger = 100, // px
         backToTop = function () {
@@ -32,6 +34,10 @@ $('#submitBut').click(function(event){
 });
 $('#textarea').css('border','solid red 1px');
 $('#textarea').css('background','red');
+
+if(textlength>100){
+    $('#textarea').attr("disabled","disabled"); 
+}
 function enableBtns(){
     $('#submitBut').attr('disabled', false);
         $('#submitBut').text("Submit");
