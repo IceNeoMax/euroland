@@ -1,1 +1,5 @@
 .table-responsive {height:180px;}
+
+tr:nth-child(evens){
+    background: antiquewhite;
+}
