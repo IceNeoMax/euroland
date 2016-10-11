@@ -19,3 +19,20 @@ if ($('#back-to-top').length) {
         }, 700);
     });
 }
+
+$('#submitBut').click(function(event){
+    $('#submitBut').attr('disabled', true);
+        $('#submitBut').text("Saving...");
+  setTimeout(function(){enableBtns()},1000);
+    
+    setTimeout(function(){
+        event.preventDefault();
+        $('#submitBut').submit();},1300);
+        
+});
+
+function enableBtns(){
+    $('#submitBut').attr('disabled', false);
+        $('#submitBut').text("Submit");
+    
+}
