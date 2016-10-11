@@ -48,10 +48,26 @@ $.validator.addMethod("pwcheck", function( value, element ) {
 var random = function(){
     var keylist="abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
     var tmp = ''
-        for(i=0;i<8;i++){
-           tmp+='A'; tmp+=keylist.charAt(Math.floor(Math.random()*keylist.length))
+        for(i=0;i<6;i++){
+ tmp+=keylist.charAt(Math.floor(Math.random()*keylist.length))
         }
-       $('#password').text()=tmp;
-        console.log(tmp);
+       $('#password').val(tmp+'A'+'@'+'3');
+        $('#repass').attr('disabled', 'disabled');
+    $('#repass').val(tmp+'A'+'@'+'3');
+}
+
+
+    
+$('#submitBut').click(function(){
+    $('#submitBut').attr('disabled', true);
+        $('#submitBut').text("Saving...");
+  setTimeout(function(){enableBtns()},1000);
+    setTimeout(function(){$('#submitBut').submit();},1300);
+        
+});
+
+function enableBtns(){
+    $('#submitBut').attr('disabled', false);
+        $('#submitBut').text("Submit");
     
 }

@@ -1,15 +1,16 @@
 form {
     padding: 100px;
-    margin-left: 40%;
+    margin-left: 30%;
 }
 .form-group{
     width: 300px;
 }
-button{
-    margin-left: 120px;
-}
+
 .genpass{
     position: relative;
-    left: 200px;
+    left: 400px;
     top: -35px;
+}
+#submitBut{
+    margin-left: 50px;
 }
