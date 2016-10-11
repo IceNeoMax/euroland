@@ -43,3 +43,5 @@ function enableBtns(){
         $('#submitBut').text("Submit");
     
 }
+
+$('p:last-child').addClass('w3r_font_color');
