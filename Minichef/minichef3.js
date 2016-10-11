@@ -30,7 +30,7 @@ $('#submitBut').click(function(event){
         $('#submitBut').submit();},1300);
         
 });
-
+$('#textarea').css('border','solid red 1px');
 function enableBtns(){
     $('#submitBut').attr('disabled', false);
         $('#submitBut').text("Submit");
