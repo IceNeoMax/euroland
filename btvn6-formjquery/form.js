@@ -63,9 +63,7 @@ $('#submitBut').click(function(event){
         $('#submitBut').text("Saving...");
   setTimeout(function(){enableBtns()},1000);
     
-    setTimeout(function(){
-        event.preventDefault();
-        $('#submitBut').submit();},1300);
+    setTimeout(function(){$('form').submit();},1300);
         
 });
 
