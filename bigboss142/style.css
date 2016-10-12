@@ -1,8 +1,16 @@
+body{
+    background: url('http://cdn.wallpapersafari.com/34/54/Mjheo0.jpg');
+    background-size: cover;
+}
 .metro-tile-container
 {
     width: 100%;
 }
-
+.start-word{
+    color: white;
+    padding: 50px;
+    font-size: 60px;
+}
 .metro-tile
 {
     float: left;
