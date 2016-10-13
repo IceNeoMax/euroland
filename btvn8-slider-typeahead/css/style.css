@@ -6,10 +6,9 @@
     padding: 10px;
     font-size: 30px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
-#changelist .row{
-    margin: 30px;
-}
+
 #changelist ul { list-style: none; }
 #changelist .buttons { margin-bottom: 20px; }
 
