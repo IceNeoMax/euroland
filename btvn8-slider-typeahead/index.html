@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="lt-ie10" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>twentytwenty</title>
+  <link href="css/foundation.css" rel="stylesheet" type="text/css" />
+  <link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+
+    <div class="row" style="margin-top: 2em;">
+      <div class="large-12 columns">
+        <div class="twentytwenty-container">
+          <img src="img/1.jpg" />
+          <img src="img/1.jpg" style="opacity:0.6;" />
+        </div>
+      </div>
+    </div>
+    
+     <div id="the-basics" class="input-ahead">
+      <input class="typeahead" type="text" placeholder="States of USA">
+    </div>
+    
+   <div id="changelist" class="row">
+    <div class="buttons">
+        <button class="grid">Grid View</button>
+        <button class="list">List View</button>
+    </div>
+    
+    <ul class="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+    </ul>
+</div>    
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script>
+    $(window).load(function(){        
+      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+    });
+    </script>
+  </body>
+</html>

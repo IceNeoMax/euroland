@@ -1,0 +1,18 @@
+.input-ahead{
+    margin-left: 30%;
+    margin-top: 20px;
+}
+.input-ahead input{
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+#changelist .row{
+    margin: 30px;
+}
+#changelist ul { list-style: none; }
+#changelist .buttons { margin-bottom: 20px; }
+
+#changelist .list li { width: 100%; border-bottom: 1px dotted #CCC; margin-bottom: 10px; padding-bottom: 10px; }
+
+#changelist .grid li { float: left; width: 20%; height: 50px; border-right: 1px dotted #CCC; border-bottom: 1px dotted #CCC; padding: 20px; }
