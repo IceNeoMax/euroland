@@ -1,16 +1,31 @@
-#sortable1, #sortable2 {
-    border: 1px solid #eee;
-    width: 142px;
-    min-height: 20px;
-    list-style-type: none;
-    margin: 0;
-    padding: 5px 0 0 0;
-    float: left;
-    margin-right: 10px;
-  }
-  #sortable1 li, #sortable2 li {
-    margin: 0 5px 5px 5px;
-    padding: 5px;
-    font-size: 1.2em;
-    width: 120px;
-  }
+/* Styles go here */
+
+.box-container {
+	min-height: 200px;
+}
+
+.box-item {
+	width: 100%;
+	z-index: 1000;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+.panel-title{
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    line-height: 1.5em;
+}
+
+.panel-default>.panel-heading{
+        background-color: aquamarine !important;
+}
+
+.add-work input{
+    font-family: 'Eczar', serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+}

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Eczar|Indie+Flower|Lobster|Raleway" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -10,31 +11,61 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-<link rel="stylesheet" href="jquery/jquery-ui.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" />
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <ul id="sortable1" class="connectedSortable">
-  <li class="ui-state-default">Item 1</li>
-  <li class="ui-state-default">Item 2</li>
-  <li class="ui-state-default">Item 3</li>
-  <li class="ui-state-default">Item 4</li>
-  <li class="ui-state-default">Item 5</li>
-</ul>
- 
-<ul id="sortable2" class="connectedSortable">
-  <li class="ui-state-highlight">Item 1</li>
-  <li class="ui-state-highlight">Item 2</li>
-  <li class="ui-state-highlight">Item 3</li>
-  <li class="ui-state-highlight">Item 4</li>
-  <li class="ui-state-highlight">Item 5</li>
-</ul>
+   <div class="container-fluid">
+     <div class="row ">
+        <div class="col-xs-12 add-work">
+            <input type="text" class="form-control simple-head" id="todoadd" placeholder="Add your todo here" required>     
+        </div>
+         
+     </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">Priority</h1>
+            </div>
+            <div id="container1" class="panel-body box-container connectedSortable">
+              <div itemid="itm-1" class="btn btn-default box-item">Get the kids</div>
+              <div itemid="itm-2" class="btn btn-default box-item">Go shopping</div>
+              <div itemid="itm-3" class="btn btn-default box-item">Make dinner</div>
+              <div itemid="itm-4" class="btn btn-default box-item">Skydiving</div>
+              <div itemid="itm-5" class="btn btn-default box-item">Go Hawaii</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">To Do</h1>
+            </div>
+            <div id="container2" class="panel-body box-container connectedSortable">
+                <div itemid="itm-6" class="btn btn-default box-item">Go France</div>
+                <div itemid="itm-7" class="btn btn-default box-item">Clean the Gara</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">Done</h1>
+            </div>
+            <div id="container3" class="panel-body box-container connectedSortable"></div>
+          </div>
+        </div>
+      </div>
+    </div>
    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="todo.js"></script>
 </body>
 </html>
