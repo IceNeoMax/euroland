@@ -1,4 +1,24 @@
-    $('form').validate({
+var config = {
+        apiKey: "AIzaSyDnJ94CEmRET1pEIyUd0l0bkILFgHBxne8",
+        authDomain: "todo-euroland.firebaseapp.com",
+        databaseURL: "https://todo-euroland.firebaseio.com",
+        storageBucket: "todo-euroland.appspot.com",
+        messagingSenderId: "735027325948"
+      };
+firebase.initializeApp(config);
+var database = firebase.database();
+
+function writeUserData(userId, name, email,pass) {
+  firebase.database().ref(userId).set({
+    username: name,
+    email: email,
+    password:pass
+  });
+}
+        
+
+
+$('form').validate({
         rules: {
             name: {
                 minlength: 6,
@@ -26,7 +46,7 @@
             $(element).closest('.form-group').addClass('has-error animated bounce');
         },
         unhighlight: (element) => {
-            $(element).closest('.form-group').removeClass('has-error');
+            $(element).closest('.form-group').removeClass('has-error animated bounce');
         },
         errorElement: 'span',
         errorClass: 'help-block',
@@ -36,19 +56,26 @@
             } else {
                 error.insertAfter(element);
             }
-        }
-    });
-$.validator.methods.email =  ( value, element )  => {
+        },
+        submitHandler: function() {
+            let temp = Math.floor(Math.random()*10000000); writeUserData(temp,$('#username').val(),$('#email').val(),$('#password').val());
+            
+          }
+            });
+$.validator.methods.email = function ( value, element )  {
   return this.optional( element ) || /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test( value );
 }
-$.validator.addMethod("pwcheck", ( value, element ) =>{
-        return this.optional(element) || /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,})/.test( value );
+$.validator.addMethod("pwcheck", function( value, element ){
+//    if(element.value == /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/)
+//   return false;
+//   else return true;
+        return this.optional(element) || /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/.test( value );
 });
 
 var random = () =>{
     var keylist="abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
     var tmp = ''
-        for(i=0;i<6;i++){
+        for(let i=0;i<6;i++){
  tmp+=keylist.charAt(Math.floor(Math.random()*keylist.length))
         }
        $('#password').val('M'+tmp+'*'+'3');
@@ -65,8 +92,8 @@ $('#submitBut').click((event)=>{
     $('#submitBut').attr('disabled', true);
         $('#submitBut').text("Saving...");
   setTimeout(function(){enableBtns()},1000);
-    
-    setTimeout(()=>{$('form').submit();},1300);
+    if ($('form').valid())
+        setTimeout(()=>{$('form').submit();},1100);
         
 });
 
