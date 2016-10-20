@@ -1,0 +1,46 @@
+body{
+     margin-left: 110px;
+    margin-right: 110px;
+    width: 1000px;
+    margin-top: 20px;
+    
+}
+
+.navtop{
+   height: 150px;
+}
+.logo{
+    position: absolute;
+    
+}
+
+ul{
+    margin-top: 20px;
+}
+ul li{
+    list-style: none;
+   float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid black;
+}
+ul li:first-child{
+    border: none;
+}
+
+a{
+     text-decoration: none;
+    color: black;
+}
+.bottom-nav{
+    position: relative;
+    top:50px;
+    left:400px;
+}
+.bottom-nav li{
+    border: none;
+    margin-right: 7px;
+}
+.bottom-nav li a{
+    text-decoration: underline;
+}
