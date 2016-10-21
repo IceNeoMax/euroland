@@ -44,11 +44,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-6 account-left">
 					<h3>Existing User</h3>
 					<div class="account-bottom">
-						<input placeholder="Email" type="text" tabindex="3" required>
-						<input placeholder="Password" type="password" tabindex="4" required>
+						<input placeholder="Email" id="email-login" type="text" required>
+						<input placeholder="Password" id="pass-login" type="password" required>
 						<div class="address">
 							
-							<center><input type="submit" value="Login"></center>
+							<center><input type="button" value="Sign in" id="login-button"></center>
 						</div>
 					</div>
 				</div>
@@ -82,8 +82,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<span class="simpleCart_total"></span></div>
 								<img src="images/cart-1.png" alt="" />
 						</a>
-						<a href="#login" class="col-md-3 col-xs-3" data-toggle="modal" data-target="#myModal">Login</a>
-						<a href="register.html" class="col-md-3 col-xs-3">Signup</a>
+						<a href="#login" id="login-div" class="col-md-3 col-xs-3" data-toggle="modal" data-target="#myModal">Login</a>
+						<a href="register.html" class="col-md-3 col-xs-3">Register</a>
 						<p><a href="javascript:;" class="simpleCart_empty"></a></p>
 						<div class="clearfix"> </div>
 					</div>
@@ -371,5 +371,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!--footer-end-->	
+	<script src="lib/authen.js"></script>
 </body>
 </html>
