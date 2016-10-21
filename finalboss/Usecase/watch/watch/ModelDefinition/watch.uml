@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="ef948b2a-c82c-4823-aa3c-1d98156857e5"
   name="watch" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -684,45 +684,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-          <association
-            Id="fd497cdf-3883-477a-bb80-e54132eab28d"
-            isDerived="false"
-            sourceEndRoleName="Admin"
-            targetEndRoleName="Get feedback"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="056d46dc-1570-46bf-b2aa-87a396a1412f"
-              LastKnownName="Get feedback"
-              LastKnownLocation="watch.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="0c7d9a3a-78e2-4d57-8af6-9eb3ab384cb6"
-                  name="Admin"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="60570b21-721c-4ef0-b94e-637dfe0ec948"
-                  name="Get feedback"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -801,6 +762,45 @@
                 <memberEnd
                   Id="6779f06b-05b3-4056-868b-f387c300f551"
                   name="Add product"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7af7673f-9a22-448c-b8dd-107d3d0c23a6"
+            isDerived="false"
+            sourceEndRoleName="Login"
+            targetEndRoleName="Get feedback"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="056d46dc-1570-46bf-b2aa-87a396a1412f"
+              LastKnownName="Get feedback"
+              LastKnownLocation="watch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="91ff467d-4a98-4f1f-a0db-3c8d93e99bde"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bce148fb-91b8-472b-a13f-a948de80d09d"
+                  name="Get feedback"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"

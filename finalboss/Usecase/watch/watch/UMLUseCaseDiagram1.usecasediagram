@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4bc834b2-ceaf-4209-8f18-b5393ab21dc3" name="UMLUseCaseDiagram1" linkedPackageId="4ce975ab-5745-465f-9324-2012780bb5c6" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4bc834b2-ceaf-4209-8f18-b5393ab21dc3" name="UMLUseCaseDiagram1" linkedPackageId="4ce975ab-5745-465f-9324-2012780bb5c6" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="4c5ffb25-eade-448b-b496-ea7038f31b51" name="Customer" isAbstract="false" isLeaf="false">
@@ -190,35 +190,6 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="d974249a-f399-4acc-8713-6a4a4b5107cc" name="Choose size" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="ea11c0a9-59d6-470b-8eca-8d2832583fb7" />
-        <targetEnds>
-          <association Id="982e2b30-b185-4929-bf12-cecdd3f6faf5" isDerived="false" sourceEndRoleName="Choose size" targetEndRoleName="Add to cart" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="45d4a6db-604f-452e-9db7-c1948e8d9b4a" LastKnownName="Add to cart" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="97ebdf19-eb67-4e4d-85a9-f1577f6e3d97" name="Choose size" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="4723182c-3cb1-40b8-ac76-cd0f8d4ad5ea" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="8e374049-4e7a-4b3e-a526-8d2bf0228dbf" name="Add to cart" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="3c4dce0a-dc8e-43ef-aafa-87c3fdc2d813" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="6e7eeab7-510c-4834-bed8-2d7d63ef37cd" />
-          </association>
-        </targetEnds>
-        <extendedCases>
-          <extend Id="1cdaf105-8993-43de-9fcb-5a7ae92b75d1">
-            <useCaseMoniker Id="7a7062b8-4fc4-4841-90b0-589daee8e9ac" LastKnownName="Choose product" />
-            <elementDefinition Id="399b9a00-5f4a-43e0-b65f-86e68e990243" />
-          </extend>
-        </extendedCases>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
       <useCase Id="45d4a6db-604f-452e-9db7-c1948e8d9b4a" name="Add to cart" isAbstract="false" isLeaf="false">
         <elementDefinition Id="97af2498-412f-4cec-8861-3db236597a46" />
       </useCase>
@@ -354,22 +325,6 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="29922955-d3d4-4a5f-b46b-f147ed39fdda" />
           </association>
-          <association Id="38842412-ac5d-46c2-9597-47f159dcf677" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Get feedback" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="49027bfa-dfce-4a91-badc-0aa28ea769e7" LastKnownName="Get feedback" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="f5ae5eec-682a-4879-90a6-7dc3d3fcc948" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="0c7d9a3a-78e2-4d57-8af6-9eb3ab384cb6" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="02091756-fd33-4573-9558-76373a0573a5" name="Get feedback" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="60570b21-721c-4ef0-b94e-637dfe0ec948" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="fd497cdf-3883-477a-bb80-e54132eab28d" />
-          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -409,6 +364,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="cd436262-aa50-41ac-a160-d6f8eb072b1e" />
           </association>
+          <association Id="a24c74ce-77a4-452c-a5aa-7f9fa5f18ba4" isDerived="false" sourceEndRoleName="Login" targetEndRoleName="Get feedback" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="49027bfa-dfce-4a91-badc-0aa28ea769e7" LastKnownName="Get feedback" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="62c29004-0c58-4368-936d-0cb67ec33960" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="91ff467d-4a98-4f1f-a0db-3c8d93e99bde" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b74d6bab-8af5-4683-8008-bf65d3672168" name="Get feedback" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bce148fb-91b8-472b-a13f-a948de80d09d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7af7673f-9a22-448c-b8dd-107d3d0c23a6" />
+          </association>
         </targetEnds>
       </useCase>
     </useCaseModelRootHasTypes>
@@ -436,22 +407,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="4bdfbff7-cee1-480c-8189-4f5ee04a8f72" />
-          </association>
-          <association Id="e25f7873-0349-40e7-96d3-3d8cb0b4bbe9" isDerived="false" sourceEndRoleName="Add product" targetEndRoleName="Size" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="8ebb85fd-1033-4a5a-b653-207eed9f724d" LastKnownName="Size" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="c652b4cf-c52b-4abe-a0b3-68104fcd3b0a" name="Add product" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="3dede3ce-630b-4ce9-8e8b-365f1be85eed" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="eb8c676e-4241-4ba2-8777-23a25c0dc098" name="Size" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="e4ff0cfa-d3ef-45b2-bfa6-556733e6fffe" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="56db0ab5-8ff6-4aad-9783-4b7fc6841fed" />
           </association>
           <association Id="6f342c4d-9a2c-4707-805d-da00d47129c5" isDerived="false" sourceEndRoleName="Add product" targetEndRoleName="Skin" isLeaf="false" isAbstract="false">
             <useCaseMoniker Id="17d5965b-adb5-4e57-85a5-80aac5532970" LastKnownName="Skin" />
@@ -525,11 +480,6 @@
     <useCaseModelRootHasTypes>
       <useCase Id="17d5965b-adb5-4e57-85a5-80aac5532970" name="Skin" isAbstract="false" isLeaf="false">
         <elementDefinition Id="49540c46-4f6f-4490-80bb-5f20a6640fd6" />
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="8ebb85fd-1033-4a5a-b653-207eed9f724d" name="Size" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="45850508-c63b-4b2d-b1db-e877eaeb0b97" />
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
