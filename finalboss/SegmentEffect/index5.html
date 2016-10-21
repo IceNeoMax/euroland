@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+		<link rel="icon" href="watch.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/segment.css" />
+		<script>
+		document.documentElement.className = 'js';
+		</script>
+	</head>
+	<body >
+    
+		<main>
+		    <div class="demo-5" style="display:none;">
+			<!-- Initial markup -->
+                <div class="segmenter" style="background-image: url(img/5.jpg)"></div>
+                <h2 class="trigger-headline trigger-headline--hidden"><i><span>What</span><span>Makes</span><span>Man?</span></i></h2>
+                
+			</div>
+		</main>
+		asdasdasd
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/segment.js"></script>
+		<script src="js/bpopup.min.js"></script>
+		<script>
+            $( document ).ready(function() {
+                $('.demo-5').bPopup({
+                    onOpen: function() {
+                        var headline = document.querySelector('.trigger-headline'),
+                            segmenter = new Segmenter(document.querySelector('.segmenter'), {
+                                pieces: 10,
+                                positions: [
+                                    {top: 0, left: 0, width: 100, height: 100},
+                                    {top: 0, left: 0, width: 100, height: 100},
+                                    {top: 0, left: 0, width: 100, height: 100},
+                                    {top: 0, left: 0, width: 100, height: 100},
+                                    {top: 0, left: 0, width: 100, height: 100},
+                                    {top: 0, left: 0, width: 100, height: 100},
+                                    {top: 0, left: 0, width: 100, height: 100},
+                                    {top: 0, left: 0, width: 100, height: 100}
+                                ],
+                                shadows: false,
+                                parallax: true,
+                                parallaxMovement: {min: 10, max: 100},
+                                animation: {
+                                    duration: 7500,
+                                    easing: 'easeOutExpo',
+                                    delay: 0,
+                                    opacity: .1,
+                                    translateZ: {min: 5, max: 25}
+                                },
+                                onReady: function() {
+                                        segmenter.animate();
+                                        headline.classList.remove('trigger-headline--hidden');
+                                }
+                            });
+                    },
+                    autoClose: 4000 //Auto closes after 1000ms/1sec
+                });
+            });
+            
+		
+		</script>
+	</body>
+</html>
