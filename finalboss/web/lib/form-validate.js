@@ -1,21 +1,25 @@
-//var config = {
-//        apiKey: "AIzaSyDnJ94CEmRET1pEIyUd0l0bkILFgHBxne8",
-//        authDomain: "todo-euroland.firebaseapp.com",
-//        databaseURL: "https://todo-euroland.firebaseio.com",
-//        storageBucket: "todo-euroland.appspot.com",
-//        messagingSenderId: "735027325948"
-//      };
-//firebase.initializeApp(config);
-//var database = firebase.database();
-//
-//function writeUserData(userId, name, email,pass) {
-//  firebase.database().ref(userId).set({
-//    username: name,
-//    email: email,
-//    password:pass
-//  });
-//}
-        
+
+
+
+var config = {
+    apiKey: "AIzaSyBFM1Vgl0Nr7btqvdboyMceh9gRuoeXU4I",
+    authDomain: "watch-shop-1d159.firebaseapp.com",
+    databaseURL: "https://watch-shop-1d159.firebaseio.com",
+    storageBucket: "watch-shop-1d159.appspot.com",
+    messagingSenderId: "210995421809"
+  };
+
+firebase.initializeApp(config);
+
+function writeUserData(userId, name, email, pass,phone,add) {
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+    pass : pass,
+    phone:phone,
+    add: add
+  });
+}
 $('form').validate({
         rules: {
             name: {
@@ -65,14 +69,11 @@ $('form').validate({
             }
         },
         submitHandler: function() {
-//            $('input[type="submit"]').attr('disabled', true).val("Saving...");
-//            setTimeout(function(){$('input[type="submit"]').attr('disabled', false).val("Submit");
-//                                 
-//                                 },1000);
-            let temp = Math.floor(Math.random()*10000000); //writeUserData(temp,$('#username').val(),$('#email').val(),$('#password').val());
-            form.submit();
-                
-            
+
+            let temp = Math.floor(Math.random()*10000000); 
+            writeUserData(temp,$('#username').val(),$('#email').val(),$('#password').val(),$('#phone').val(),$('#address').val());
+            $('form').remove();
+            $('.register .container').append("Register successfully. Return our main <a href="+"index.html"+">Page</a>");
           }
 });
 
