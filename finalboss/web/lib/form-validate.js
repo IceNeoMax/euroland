@@ -17,7 +17,8 @@ function writeUserData(userId, name, email, pass,phone,add) {
     email: email,
     pass : pass,
     phone:phone,
-    add: add
+    add: add,
+    golden: false
   });
 }
 $('form').validate({
