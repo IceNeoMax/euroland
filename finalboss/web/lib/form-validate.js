@@ -12,7 +12,7 @@ var config = {
 firebase.initializeApp(config);
 
 function writeUserData(userId, name, email, pass,phone,add) {
-  firebase.database().ref('users/' + userId).set({
+  firebase.database().ref('customers/' + userId).set({
     username: name,
     email: email,
     pass : pass,
