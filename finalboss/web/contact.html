@@ -27,7 +27,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/memenu.js"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
 <!--dropdown-->
-<script src="js/jquery.easydropdown.js"></script>			
+<script src="js/jquery.easydropdown.js"></script>		
+<script src="https://www.gstatic.com/firebasejs/3.5.1/firebase.js"></script>
 </head>
 <body> 
 	<!--top-header-->
@@ -123,13 +124,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 					<div class="col-md-9 contact-right">
-						<form>
-							<input type="text" placeholder="Name">
-							<input type="text" placeholder="Phone">
-							<input type="text"  placeholder="Email">
-							<textarea placeholder="Message" required=""></textarea>
+						<form id="shitForm">
+							<input type="text" placeholder="Name" id="name">
+							<input type="text" placeholder="Phone" id="phone">
+							<input type="text"  placeholder="Email" id="email">
+							<textarea placeholder="Message" required="" id="mess"></textarea>
 							<div class="submit-btn">
-								<input type="submit" value="SUBMIT">
+								<input type="button" value="SUBMIT" id="submitForm">
 							</div>
 						</form>
 					</div>	
@@ -205,6 +206,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-	<!--footer-end-->	
+	<!--footer-end-->
+<script src="lib/contact.js"></script>	
+
 </body>
 </html>

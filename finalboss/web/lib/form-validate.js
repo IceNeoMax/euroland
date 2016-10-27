@@ -18,7 +18,8 @@ function writeUserData(userId, name, email, pass,phone,add) {
     pass : pass,
     phone:phone,
     add: add,
-    golden: false
+    golden: false,
+    point:0
   });
 }
 $('form').validate({
