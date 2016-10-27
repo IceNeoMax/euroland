@@ -27,6 +27,9 @@ $("#submitForm").click(function(){
         
         
          writeUserData(insertKey,name,phone, email, mess);
+        $('.contact-text .contact-left').remove();
+        $('.contact-text .contact-right').remove();
+        $('.contact-text').append('<h3>Thanks for sending us your feedback!</h3>Click <a href="./index.html">here</a> to return main page.')
     });
 });
 
