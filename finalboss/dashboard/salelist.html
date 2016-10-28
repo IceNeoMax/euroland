@@ -45,14 +45,14 @@
                 </a>
             </div>
 
-         <ul class="nav">
+        <ul class="nav">
                 <li>
                     <a href="dashboard.html">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="user.html">
                         <i class="pe-7s-user"></i>
                         <p>Customers Profile</p>
@@ -65,8 +65,8 @@
                         <p>Feedbacks</p>
                     </a>
                 </li>
-                <li>
-                    <a href="table.html">
+                <li class="active">
+                    <a href="salelist.html">
                         <i class="pe-7s-shopbag"></i>
                         <p>Sale List</p>
                     </a>
@@ -85,7 +85,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Profile</a>
+                    <a class="navbar-brand" href="#">Table List</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -150,78 +150,74 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Customers List</h4>
+                                <h4 class="title">Striped Table with Hover</h4>
+                                <p class="category">Here is a subtitle for this table</p>
                             </div>
-                            <div class="content">
-                                      <div class="content table-responsive table-full-width">
+                            <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>ID</th>
-                                    	<th>Username</th>
-                                    	<th>Email</th>
-                                    	<th>Phone</th>
-                                    	<th>Address</th>
-                                    	<th>Gold Member</th>
-                                    	<th>Point</th>
+                                    	<th>Name</th>
+                                    	<th>Salary</th>
+                                    	<th>Country</th>
+                                    	<th>City</th>
                                     </thead>
                                     <tbody>
-<!--
                                         <tr>
                                         	<td>1</td>
                                         	<td>Dakota Rice</td>
                                         	<td>$36,738</td>
                                         	<td>Niger</td>
                                         	<td>Oud-Turnhout</td>
-                                        	<td><button>set gold</button></td>
-                                        	<td>0</td>
                                         </tr>
--->
-                                        
+                                        <tr>
+                                        	<td>2</td>
+                                        	<td>Minerva Hooper</td>
+                                        	<td>$23,789</td>
+                                        	<td>Curaçao</td>
+                                        	<td>Sinaai-Waas</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>3</td>
+                                        	<td>Sage Rodriguez</td>
+                                        	<td>$56,142</td>
+                                        	<td>Netherlands</td>
+                                        	<td>Baileux</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>4</td>
+                                        	<td>Philip Chaney</td>
+                                        	<td>$38,735</td>
+                                        	<td>Korea, South</td>
+                                        	<td>Overland Park</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>5</td>
+                                        	<td>Doris Greene</td>
+                                        	<td>$63,542</td>
+                                        	<td>Malawi</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>6</td>
+                                        	<td>Mason Porter</td>
+                                        	<td>$78,615</td>
+                                        	<td>Chile</td>
+                                        	<td>Gloucester</td>
+                                        </tr>
                                     </tbody>
                                 </table>
 
                             </div>
-
-                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card card-user">
-                            <div class="image">
-                                <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
-                            </div>
-                            <div class="content">
-                                <div class="author">
-                                     <a href="#">
-                                    <img class="avatar border-gray" src="assets/img/faces/face-1.jpg" alt="..."/>
-
-                                      <h4 class="title">Handsome Admin<br />
-                                         <small>nguyen hihi123</small>
-                                      </h4>
-                                    </a>
-                                </div>
-                                <p class="description text-center"> Lorem ipsum dolor. <br>
-                                                    Lorem ipsum dolor sit amet. <br>
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, omnis?
-                                </p>
-                            </div>
-                            <hr>
-                            <div class="text-center">
-                                <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
-                                <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
-                                <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
-
-                            </div>
-                        </div>
-                    </div>
+                    </div>  
 
                 </div>
             </div>
         </div>
-
 
         <footer class="footer">
             <div class="container-fluid">
@@ -255,6 +251,7 @@
             </div>
         </footer>
 
+
     </div>
 </div>
 
@@ -274,12 +271,11 @@
     <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>
 
-
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/light-bootstrap-dashboard.js"></script>
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
-    <script src="lib/user.js"></script>
+
+
 </html>

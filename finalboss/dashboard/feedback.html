@@ -45,7 +45,7 @@
                 </a>
             </div>
 
-            <ul class="nav">
+        <ul class="nav">
                 <li>
                     <a href="dashboard.html">
                         <i class="pe-7s-graph"></i>
@@ -60,25 +60,17 @@
                 </li>
                 
                 <li class="active">
-                    <a href="table.html">
+                    <a href="feedback.html">
                         <i class="pe-7s-note2"></i>
-                        <p>Products</p>
+                        <p>Feedbacks</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="salelist.html">
                         <i class="pe-7s-shopbag"></i>
                         <p>Sale List</p>
                     </a>
-                </li>
-                <li>
-                    <a href="table.html">
-                        <i class="pe-7s-id"></i>
-                        <p>Feed Back</p>
-                    </a>
-                </li>
-                
-                
+                </li>  
             </ul>
     	</div>
     </div>
@@ -161,61 +153,21 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Striped Table with Hover</h4>
-                                <p class="category">Here is a subtitle for this table</p>
+                                <h4 class="title">Feedbacks From Customers</h4>
+                                <p class="category">Get feedbacks to be better!</p>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>ID</th>
                                     	<th>Name</th>
-                                    	<th>Salary</th>
-                                    	<th>Country</th>
-                                    	<th>City</th>
+                                    	<th>Phone</th>
+                                    	<th>Email</th>
+                                    	<th>Message</th>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                        	<td>1</td>
-                                        	<td>Dakota Rice</td>
-                                        	<td>$36,738</td>
-                                        	<td>Niger</td>
-                                        	<td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>2</td>
-                                        	<td>Minerva Hooper</td>
-                                        	<td>$23,789</td>
-                                        	<td>Curaçao</td>
-                                        	<td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>3</td>
-                                        	<td>Sage Rodriguez</td>
-                                        	<td>$56,142</td>
-                                        	<td>Netherlands</td>
-                                        	<td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>4</td>
-                                        	<td>Philip Chaney</td>
-                                        	<td>$38,735</td>
-                                        	<td>Korea, South</td>
-                                        	<td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>5</td>
-                                        	<td>Doris Greene</td>
-                                        	<td>$63,542</td>
-                                        	<td>Malawi</td>
-                                        	<td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>6</td>
-                                        	<td>Mason Porter</td>
-                                        	<td>$78,615</td>
-                                        	<td>Chile</td>
-                                        	<td>Gloucester</td>
-                                        </tr>
+                                        
+                                        
                                     </tbody>
                                 </table>
 
@@ -279,14 +231,12 @@
     <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>
 
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/light-bootstrap-dashboard.js"></script>
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+    <script src="lib/feedback.js"></script>
 
 </html>
