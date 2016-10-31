@@ -41,11 +41,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="account-top heading">
 				<h2>ACCOUNT</h2>
 			</div>
-			<div class="account-main">
-				<div class="col-md-6 account-left">
+			<div class="account-main" id="register-login">
+				<div class="col-md-6 account-left" id="account-left-side">
 					<h3>Existing User</h3>
 					<div class="account-bottom">
-						<input placeholder="Email" id="email-login" type="text" required>
+						<input placeholder="ID" id="id-login" type="text" required>
 						<input placeholder="Password" id="pass-login" type="password" required>
 						<div class="address">
 							
@@ -66,7 +66,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
     </div>
 
-
 	<!--top-header-->
 	<div class="top-header">
 		<div class="container">
@@ -84,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<img src="images/cart-1.png" alt="" />
 						</a>
 						<a href="#login" id="login-div" class="col-md-3 col-xs-3" data-toggle="modal" data-target="#myModal">Login</a>
-						<a href="register.html" class="col-md-3 col-xs-3">Register</a>
+						<a href="register.html" class="col-md-3 col-xs-3" id="register-div">Register</a>
 						<p><a href="javascript:;" class="simpleCart_empty"></a></p>
 						<div class="clearfix"> </div>
 					</div>
@@ -232,6 +231,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!--footer-end-->	
+	<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
 	<script src="lib/check-out.js"></script>
+	<script src="lib/admin-authen.js"></script>
 </body>
 </html>
