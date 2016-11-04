@@ -214,15 +214,29 @@ span.simpleCart_total {
 /* WRAPPER */
 .dropdown{
 	position: relative;
-	width:75px;
 	cursor: pointer;
 	font-weight: 200;
 	background: none;
 	padding: 0;
 	color: #fff;
+    border: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	user-select: none;
+}
+.dropdown-menu{
+    min-width: 100px;
+    font-size: 100%;
+    padding: 0px;
+    
+}
+.dropdown-menu li{
+    background-color: black;
+    font-size: 100%;
+    text-align: center;
+}
+.dropdown .label{
+    font-size: 100%;
 }
 .dropdown.open{
 	z-index: 2;
