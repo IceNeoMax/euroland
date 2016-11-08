@@ -14,27 +14,17 @@ $("#submitForm").click(function(){
     let email = $("#email").val();
     let mess = $("#mess").val();
     firebase.database().ref('/feedbacks').once('value').then(function(snapshot) {
-        var lastKey;
-        let json = snapshot.val();
 
-        for(let key in json){
-            if(json.hasOwnProperty(key)){
-                lastKey = key;
-            }
-        }
-         console.log(lastKey);
-        let insertKey = parseInt(lastKey)+1;
-        
-        
-         writeUserData(insertKey,name,phone, email, mess);
+        let json = snapshot.val();
+         writeUserData(name,phone, email, mess);
         $('.contact-text .contact-left').remove();
         $('.contact-text .contact-right').remove();
         $('.contact-text').append('<h3>Thanks for sending us your feedback!</h3>Click <a href="./index.html">here</a> to return main page.')
     });
 });
 
-function writeUserData(key,name,phone, email, mess) {
-  firebase.database().ref('feedbacks/' + key).set({
+function writeUserData(name,phone, email, mess) {
+  firebase.database().ref('feedbacks/').push({
     name: name,
     phone: phone,
     email: email,

@@ -38,6 +38,7 @@ $( document ).ready(function() {
     
     // login from browser
       $('#login-button').click(()=>{
+          $('#append-no-login').remove();
         let ID = $('#id-login').val();
         let pass = $('#pass-login').val();
         if(ID=='admin'&& pass=='admin'){
