@@ -66,7 +66,7 @@ $( document ).ready(function() {
             $('.ckeckout-top').append('<h3>Thanks For Purchasing Our Products!');
             $('.simpleCart_total').replaceWith("<span class='simpleCart_total'>0.00 $</span>");
         }
-        else if(loginCheck==null){
+        else if(loginCheck==null&&lastPrice>0){
             console.log("asd");
             writeSaleData("",listOut, $('#address').val(), $('#phone').val(),$('#name').val());
             localStorage.removeItem('simpleCart_items');
