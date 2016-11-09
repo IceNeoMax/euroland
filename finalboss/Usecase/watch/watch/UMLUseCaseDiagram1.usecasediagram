@@ -502,6 +502,17 @@
         <elementDefinition Id="f0f608a8-e21b-453c-be91-9c573af02d87" />
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3a584614-7275-4307-869b-f700296c1d2e" name="Get discount" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="055de8a1-388f-427d-a21c-640aabe21e27" />
+        <extendedCases>
+          <extend Id="427e0561-64e5-4065-bbda-10f337c5236a">
+            <useCaseMoniker Id="a96a356a-21f1-4177-9d94-37c261a7b061" LastKnownName="Pay and insert information" />
+            <elementDefinition Id="f70bac42-d276-482a-99c2-88866449d0ae" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="4ce975ab-5745-465f-9324-2012780bb5c6" name="watch">
     <elementDefinition Id="ef948b2a-c82c-4823-aa3c-1d98156857e5" />

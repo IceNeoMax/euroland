@@ -1094,6 +1094,23 @@
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="055de8a1-388f-427d-a21c-640aabe21e27"
+        name="Get discount"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="f70bac42-d276-482a-99c2-88866449d0ae">
+            <useCaseMoniker
+              Id="9a6b99ba-42fc-4b35-9cff-8974b54abc9b"
+              LastKnownName="Pay and insert information"
+              LastKnownLocation="watch.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
