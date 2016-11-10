@@ -1,5 +1,5 @@
 
-
+//firebase init
 
 var config = {
     apiKey: "AIzaSyBFM1Vgl0Nr7btqvdboyMceh9gRuoeXU4I",
@@ -10,7 +10,7 @@ var config = {
   };
 
 firebase.initializeApp(config);
-
+// insert user id
 function writeUserData(userId, name, email, pass,phone,add) {
   firebase.database().ref('customers/' + userId).set({
     username: name,
@@ -22,6 +22,8 @@ function writeUserData(userId, name, email, pass,phone,add) {
     point:0
   });
 }
+
+//check form
 $('form').validate({
         rules: {
             name: {
@@ -70,6 +72,7 @@ $('form').validate({
                 error.insertAfter(element);
             }
         },
+    //submit form success
         submitHandler: function() {
 
             let temp = Math.floor(Math.random()*10000000); 
@@ -91,7 +94,7 @@ $.validator.addMethod("phonecheck", function( value, element ){
 
         return this.optional(element) || /0[0-9]{4,}/.test( value );
 });
-
+//random password
 var random = () =>{
     var keylist="abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
     var tmp = ''

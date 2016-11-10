@@ -1,3 +1,5 @@
+// init firebase
+
 var config = {
 apiKey: "AIzaSyBFM1Vgl0Nr7btqvdboyMceh9gRuoeXU4I",
 authDomain: "watch-shop-1d159.firebaseapp.com",
@@ -41,6 +43,8 @@ $( document ).ready(function() {
           $('#append-no-login').remove();
         let ID = $('#id-login').val();
         let pass = $('#pass-login').val();
+          
+          //admin login
         if(ID=='admin'&& pass=='admin'){
             let temp="watch_login";
             $('#login-div').text('Admin').attr('href','../dashboard/dashboard.html').attr( {"data-target": null,"data-toggle": null} );
@@ -50,6 +54,7 @@ $( document ).ready(function() {
             localStorage.setItem("watch_login",JSON.stringify({type:"admin"}));
         }  
         else{
+            //user login
             firebase.database().ref('/customers').once('value').then(function(snapshot) {
                 var tempjson = snapshot.val();
                 for(let key in tempjson){
