@@ -14,7 +14,7 @@ $( document ).ready(function() {
     //check authen from local
     if(loginCheck!=null){
           if(loginCheck.type=="admin"){
-                $('#login-div').text('Admin').attr('href','../dashboard/dashboard.html').attr( {"data-target": null,"data-toggle": null} );
+                $('#login-div').text('Admin').attr('href','./dashboard/dashboard.html').attr( {"data-target": null,"data-toggle": null} );
                 $('#register-div').text("LogOut").attr( {"id": "log-out","href":"#"} );
             }
             else if(loginCheck.type=="user"){
@@ -47,7 +47,7 @@ $( document ).ready(function() {
           //admin login
         if(ID=='admin'&& pass=='admin'){
             let temp="watch_login";
-            $('#login-div').text('Admin').attr('href','../dashboard/dashboard.html').attr( {"data-target": null,"data-toggle": null} );
+            $('#login-div').text('Admin').attr('href','./dashboard/dashboard.html').attr( {"data-target": null,"data-toggle": null} );
             $('#register-div').html('<div onClick="localStorage.removeItem(\''+temp+'\'); window.location.reload(true);">LogOut</div>');
             $('#register-div').attr("href","#");
             $('#myModal').modal('toggle');
